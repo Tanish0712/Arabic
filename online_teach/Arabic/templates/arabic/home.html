@@ -1,0 +1,114 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIIS Dubai Arabic Learning</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url({% static 'img/GIIS.jpeg' %}) center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgb(240, 240, 240, 0.6);
+            font-size: 1.2rem;
+            transition: color 0.5s;
+        }
+
+        .navbar a:hover {
+            color: white;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+
+        .content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 2rem;
+        }
+
+        .content p {
+            font-size: 1.5rem;
+        }
+
+        .learn-button {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .learn-button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static 'img/download Background Removed.png' %}" alt="Logo" width="100">
+        </div>
+        <ul>
+            <li><a href="{% url 'home'%}">Arabic</a></li>
+            <li><a href="{% url 'phase1' %}">Phase 1</a></li>
+            <li><a href="#phase2">Phase 2</a></li>
+            <li><a href="#phase3">Phase 3</a></li>
+        </ul>
+    </div>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>GIIS, Dubai</h1>
+        <p>Welcome to our Arabic learning platform. Learn Arabic in an immersive and engaging environment.</p>
+        <button class="learn-button" onclick="window.location.href='http://127.0.0.1:8000/Phase1/'">Learn</button>
+    </div>
+</body>
+</html>
